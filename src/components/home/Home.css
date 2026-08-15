@@ -104,19 +104,9 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-/* Title and button ride the viewport, so both stay in view for the whole tall scroll. */
-.campaign__sticky {
-  position: sticky;
-  top: 0;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  justify-items: center;
-  height: 100vh;
-  padding-top: calc(var(--header-h-stuck) + var(--s-5));
-}
-
-/* Scrim so the title holds up over both a pale and a dark photograph. */
-.campaign__sticky::before {
+/* Scrim so the title holds up over both a pale and a dark photograph. Sits at the top of the
+   image and scrolls with it, like everything else in this tile. */
+.campaign__layer::before {
   content: '';
   position: absolute;
   inset: 0 0 auto 0;
@@ -125,21 +115,31 @@
   pointer-events: none;
 }
 
+/* Anchored near the top of the image rather than the viewport, so it does not travel down the
+   photograph as the page scrolls. */
 .campaign__title {
-  position: relative;
+  position: absolute;
+  top: calc(var(--header-h-stuck) + var(--s-5));
+  left: 50%;
+  translate: -50% 0;
   color: #ffffff;
   font-size: var(--fs-lead);
   white-space: nowrap;
 }
 
+/* Anchored half a screen down the tile — where it first appears — rather than sticky, so it holds
+   that spot on the image and scrolls out of view instead of tracking down the page. */
 .campaign__cta {
-  align-self: center;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
   padding: 15px 38px;
   background: var(--c-bg);
   color: var(--c-fg);
   font-size: var(--fs-nav);
   opacity: 0;
-  translate: 0 10px;
+  /* The -50% pair centres it on that anchor; the extra 10px is the rise on hover. */
+  translate: -50% calc(-50% + 10px);
   transition:
     opacity 0.35s var(--ease),
     translate 0.35s var(--ease);
@@ -148,7 +148,7 @@
 .campaign__col:hover .campaign__cta,
 .campaign__col:focus-visible .campaign__cta {
   opacity: 1;
-  translate: 0 0;
+  translate: -50% -50%;
 }
 
 /* -------------------------------------------------------------- packshots */
