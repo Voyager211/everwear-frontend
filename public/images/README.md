@@ -3,7 +3,8 @@
 Everything under `public/` is served at the site root, so `public/images/home/hero.jpg` is
 referenced in code as `/images/home/hero.jpg`. No imports, no rebuild — drop a file in and refresh.
 
-Today these are generated placeholder SVGs. Real photography replaces them at the same paths.
+The seven **home images are real photography** (see below). The **product packshots are generated
+placeholders** — real garment shots replace them at the same paths.
 
 ---
 
@@ -51,7 +52,35 @@ background achieves the same result here.
 
 ---
 
-## Generating them
+## Editorial photography — already real
+
+The seven home slots — hero, both campaign panels and the four category tiles — are **real
+photography**, sourced from [Pexels](https://www.pexels.com) under a licence that permits
+commercial use. Download or refresh them with:
+
+```bash
+node scripts/fetch-images.mjs               # all seven slots
+node scripts/fetch-images.mjs --slot hero   # just one
+```
+
+Each slot pins a specific Pexels photo id, so re-running is reproducible and won't silently swap
+your art. Search rank is not curation — the first result for "underwear" was a photo of a beach —
+so to change a slot, look at candidates first:
+
+```bash
+node scripts/contact-sheet.mjs "folded clothes stack" "socks" --orientation portrait
+```
+
+That builds an HTML contact sheet of six candidates per query, each labelled with its photo id.
+Pick one, set it as `photoId` on that slot in `fetch-images.mjs`, and re-run just that slot.
+
+Attribution for every downloaded file is recorded in `CREDITS.md`, rendered from `credits.json`.
+The Pexels licence doesn't require attribution, but the client should have the record.
+
+> **Note:** Pexels fingerprints TLS clients, so these scripts shell out to `curl` — Node's built-in
+> `fetch` gets a 403 with identical headers.
+
+## Generating the product packshots
 
 `image-manifest.csv` in the repo root lists every image with its path, dimensions, background and a
 ready-to-use prompt. Regenerate it any time:

@@ -12,7 +12,7 @@
  * drops into the same paths with the same basenames — see public/images/README.md.
  */
 
-import { mkdirSync, writeFileSync, rmSync } from 'node:fs'
+import { mkdirSync, writeFileSync, rmSync, existsSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 
@@ -226,8 +226,16 @@ const detailShot = (main, { w, h }) => {
 
 /* ------------------------------------------------------------- home imagery */
 
+/**
+ * Home slots are filled with real photography by scripts/fetch-images.mjs. Never overwrite a real
+ * .jpg with a placeholder — only draw the ones that are still missing.
+ */
+function homeSlotTaken(name) {
+  return existsSync(join(IMG, 'home', `${name}.jpg`))
+}
+
 function writeHomeImages() {
-  // Hero — light, with a deliberately clean bottom-left for the red headline.
+  if (!homeSlotTaken('hero'))
   writeFileSync(
     join(IMG, 'home', 'hero.svg'),
     svg(
@@ -254,8 +262,10 @@ function writeHomeImages() {
        <rect x="320" y="760" width="560" height="1180" rx="270" fill="#ffffff" opacity=".42"/>` +
         place(type, main, { w: 1200, h: 2250, scale: 0.52, dy: 300 }),
     )
-  writeFileSync(join(IMG, 'home', 'campaign-1.svg'), campaign(['#e7e2dd', '#cfc6bb'], 'vest', C.white))
-  writeFileSync(join(IMG, 'home', 'campaign-2.svg'), campaign(['#dfe5e4', '#b9c6c4'], 'trunks', C.teal))
+  if (!homeSlotTaken('campaign-1'))
+    writeFileSync(join(IMG, 'home', 'campaign-1.svg'), campaign(['#e7e2dd', '#cfc6bb'], 'vest', C.white))
+  if (!homeSlotTaken('campaign-2'))
+    writeFileSync(join(IMG, 'home', 'campaign-2.svg'), campaign(['#dfe5e4', '#b9c6c4'], 'trunks', C.teal))
 
   const tiles = [
     ['category-briefs', 'briefs', C.black],
@@ -264,6 +274,7 @@ function writeHomeImages() {
     ['category-socks', 'socks', C.navy],
   ]
   for (const [name, type, main] of tiles) {
+    if (homeSlotTaken(name)) continue
     writeFileSync(
       join(IMG, 'home', `${name}.svg`),
       svg(1200, 1500, `<rect width="1200" height="1500" fill="#eceae7"/>` + place(type, main, { w: 1200, h: 1500, scale: 0.66 })),

@@ -67,8 +67,8 @@ export const nav: NavItem[] = [
       },
     ],
     tiles: [
-      { image: '/images/home/category-briefs.svg', caption: 'EVERYDAY COTTON', href: shop('men') },
-      { image: '/images/home/category-vests.svg', caption: 'VESTS', href: shop('men', 'Vests') },
+      { image: '/images/home/category-briefs.jpg', caption: 'EVERYDAY COTTON', href: shop('men') },
+      { image: '/images/home/category-vests.jpg', caption: 'VESTS', href: shop('men', 'Vests') },
     ],
   },
   {
@@ -103,7 +103,7 @@ export const nav: NavItem[] = [
         ],
       },
     ],
-    tiles: [{ image: '/images/home/category-lounge.svg', caption: 'LOUNGE', href: shop('loungewear') }],
+    tiles: [{ image: '/images/home/category-lounge.jpg', caption: 'LOUNGE', href: shop('loungewear') }],
   },
   { label: 'Kids', href: shop('kids'), match: 'kids' },
   { label: 'Loungewear', href: shop('loungewear'), match: 'loungewear' },

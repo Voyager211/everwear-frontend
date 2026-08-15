@@ -1,7 +1,7 @@
 import { products } from './products'
 
 export const hero = {
-  image: '/images/home/hero.svg',
+  image: '/images/home/hero.jpg',
   headlineLines: ['FLAT 15% OFF', 'MEMBER EXCLUSIVE'],
   href: '/shop?scope=sale',
 }
@@ -43,7 +43,7 @@ export const homeModules: HomeModule[] = [
     href: '/shop',
     tiles: [
       {
-        image: '/images/home/campaign-1.svg',
+        image: '/images/home/campaign-1.jpg',
         caption: 'SOFT COTTON ESSENTIALS',
         href: '/shop?scope=men',
         hotspots: [
@@ -52,7 +52,7 @@ export const homeModules: HomeModule[] = [
         ],
       },
       {
-        image: '/images/home/campaign-2.svg',
+        image: '/images/home/campaign-2.jpg',
         caption: 'PERFORMANCE LAYERS',
         href: '/shop?q=performance',
         hotspots: [
@@ -71,15 +71,15 @@ export const homeModules: HomeModule[] = [
   {
     type: 'categoryPair',
     tiles: [
-      { image: '/images/home/category-briefs.svg', caption: 'BRIEFS', href: '/shop?types=Briefs' },
-      { image: '/images/home/category-vests.svg', caption: 'VESTS', href: '/shop?types=Vests' },
+      { image: '/images/home/category-briefs.jpg', caption: 'BRIEFS', href: '/shop?types=Briefs' },
+      { image: '/images/home/category-vests.jpg', caption: 'VESTS', href: '/shop?types=Vests' },
     ],
   },
   {
     type: 'categoryPair',
     tiles: [
-      { image: '/images/home/category-lounge.svg', caption: 'LOUNGE SETS', href: '/shop?scope=loungewear' },
-      { image: '/images/home/category-socks.svg', caption: 'SOCKS', href: '/shop?scope=socks' },
+      { image: '/images/home/category-lounge.jpg', caption: 'LOUNGE SETS', href: '/shop?scope=loungewear' },
+      { image: '/images/home/category-socks.jpg', caption: 'SOCKS', href: '/shop?scope=socks' },
     ],
   },
 ]

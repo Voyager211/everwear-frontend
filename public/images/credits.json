@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/images/home/campaign-1.jpg",
+    "src": "https://images.pexels.com/photos/40901/lingerie-girl-sexy-beauty-40901.jpeg",
+    "credit": "Pexels contributor",
+    "creditUrl": "https://www.pexels.com/photo/40901/",
+    "page": "https://www.pexels.com/photo/40901/"
+  },
+  {
+    "path": "/images/home/campaign-2.jpg",
+    "src": "https://images.pexels.com/photos/17864091/pexels-photo-17864091.jpeg",
+    "credit": "Pexels contributor",
+    "creditUrl": "https://www.pexels.com/photo/17864091/",
+    "page": "https://www.pexels.com/photo/17864091/"
+  },
+  {
+    "path": "/images/home/category-briefs.jpg",
+    "src": "https://images.pexels.com/photos/30569741/pexels-photo-30569741.jpeg",
+    "credit": "Pexels contributor",
+    "creditUrl": "https://www.pexels.com/photo/30569741/",
+    "page": "https://www.pexels.com/photo/30569741/"
+  },
+  {
+    "path": "/images/home/category-lounge.jpg",
+    "src": "https://images.pexels.com/photos/14642652/pexels-photo-14642652.jpeg",
+    "credit": "Pexels contributor",
+    "creditUrl": "https://www.pexels.com/photo/14642652/",
+    "page": "https://www.pexels.com/photo/14642652/"
+  },
+  {
+    "path": "/images/home/category-socks.jpg",
+    "src": "https://images.pexels.com/photos/5746076/pexels-photo-5746076.jpeg",
+    "credit": "Pexels contributor",
+    "creditUrl": "https://www.pexels.com/photo/5746076/",
+    "page": "https://www.pexels.com/photo/5746076/"
+  },
+  {
+    "path": "/images/home/category-vests.jpg",
+    "src": "https://images.pexels.com/photos/31155535/pexels-photo-31155535.jpeg",
+    "credit": "Pexels contributor",
+    "creditUrl": "https://www.pexels.com/photo/31155535/",
+    "page": "https://www.pexels.com/photo/31155535/"
+  },
+  {
+    "path": "/images/home/hero.jpg",
+    "src": "https://images.pexels.com/photos/5253422/pexels-photo-5253422.jpeg",
+    "credit": "Pexels contributor",
+    "creditUrl": "https://www.pexels.com/photo/5253422/",
+    "page": "https://www.pexels.com/photo/5253422/"
+  }
+]
