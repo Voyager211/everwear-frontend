@@ -5,11 +5,15 @@
   display: block;
 }
 
+/* The supplied banner carries its own headline and a deliberate composition, so it must never be
+   cropped. Matching the container to the file's aspect ratio means `cover` has nothing to trim at
+   any viewport width. Swap back to a fixed height + object-position if a full-bleed photographic
+   hero (no baked-in text) is used instead. */
 .hero__img {
   width: 100%;
-  height: clamp(420px, 62vh, 700px);
+  height: auto;
+  aspect-ratio: 2560 / 1086;
   object-fit: cover;
-  object-position: 70% center;
 }
 
 /* Headline sits inside the image, bottom left. No scrim, no button. */

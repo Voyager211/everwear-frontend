@@ -8,16 +8,30 @@ import { SectionHeaderRow } from '../ui'
 import { LongArrow } from '../ui/icons'
 import './Home.css'
 
-/** Full-bleed image with the headline sitting inside it, bottom left. No CTA button. */
+/**
+ * Full-bleed banner. When the artwork has no headline of its own, one is overlaid bottom-left in
+ * brand red; when it does, the overlay is skipped and the page keeps a screen-reader-only h1 so
+ * the document still has a heading.
+ */
 export function HeroBanner() {
+  const overlaid = hero.headlineLines.length > 0
   return (
     <Link to={hero.href} className="hero">
-      <img src={hero.image} alt="" className="hero__img" />
-      <h1 className="hero__headline display">
-        {hero.headlineLines.map((line) => (
-          <span key={line}>{line}</span>
-        ))}
-      </h1>
+      {/* A 2.36:1 banner is only ~165px tall on a phone, which makes baked-in copy unreadable.
+          Point `mobileImage` at a portrait crop of the same artwork and it is used below 700px. */}
+      <picture>
+        {hero.mobileImage && <source media="(max-width: 699px)" srcSet={hero.mobileImage} />}
+        <img src={hero.image} alt={overlaid ? '' : hero.alt} className="hero__img" />
+      </picture>
+      {overlaid ? (
+        <h1 className="hero__headline display">
+          {hero.headlineLines.map((line) => (
+            <span key={line}>{line}</span>
+          ))}
+        </h1>
+      ) : (
+        <h1 className="sr-only">{hero.alt}</h1>
+      )}
     </Link>
   )
 }

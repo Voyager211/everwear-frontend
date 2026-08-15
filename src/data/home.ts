@@ -2,8 +2,15 @@ import { products } from './products'
 
 export const hero = {
   image: '/images/home/hero.jpg',
-  headlineLines: ['FLAT 15% OFF', 'MEMBER EXCLUSIVE'],
-  href: '/shop?scope=sale',
+  /**
+   * The supplied banner has its own headline set into the artwork, so the red overlay is off —
+   * two headlines would collide. Put lines back here and the overlay returns.
+   */
+  headlineLines: [] as string[],
+  /** Optional portrait crop used below 700px, where the wide banner is too short to read. */
+  mobileImage: undefined as string | undefined,
+  alt: 'Simple Shades, Premium Feel — everyday essentials crafted for clean style and a perfect fit',
+  href: '/shop?scope=men',
 }
 
 export type HotspotSpec = { x: string; y: string; slug: string }

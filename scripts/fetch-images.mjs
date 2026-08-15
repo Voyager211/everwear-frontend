@@ -52,6 +52,7 @@ const arg = (f, d = null) => {
   return i > -1 ? (process.argv[i + 1] ?? true) : d
 }
 const DRY = process.argv.includes('--dry-run')
+const FORCE = process.argv.includes('--force')
 const ONLY = arg('--slot')
 const PICK = Number(arg('--pick', 1)) || 1
 
@@ -59,16 +60,16 @@ const PICK = Number(arg('--pick', 1)) || 1
 const SLOTS = [
   {
     id: 'hero',
-    // Men's innerwear, backlit at a window. Chosen on three counts: the left third crops to
-    // empty white (the red headline sits there), the garment is clearly visible, and the waistband
-    // carries no third-party logo — several otherwise-good candidates showed competitor branding.
+    // Client-supplied branded banner — skipped unless you explicitly pass --force. The stock
+    // fallback below is only a starting point if that artwork is ever withdrawn.
+    supplied: true,
     photoId: 32735440,
     path: 'images/home/hero.jpg',
     query: 'man underwear studio',
     orientation: 'landscape',
     w: 2560,
     h: 1440,
-    note: 'Left third must stay light and uncluttered — red headline sits there.',
+    note: 'Supplied banner is 2560x1086 with its own headline; do not overwrite.',
   },
   {
     id: 'campaign-1',
@@ -190,6 +191,10 @@ let ok = 0
 console.log(`${slots.length} slots · source: Pexels ${KEY ? '(API)' : '(public search)'}`)
 
 for (const slot of slots) {
+  if (slot.supplied && !FORCE) {
+    console.log(`  – ${slot.id} — client-supplied artwork, skipped (--force to overwrite)`)
+    continue
+  }
   try {
     const results = slot.photoId
       ? [await byId(slot.photoId)]
