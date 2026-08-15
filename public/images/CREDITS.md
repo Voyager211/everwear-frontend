@@ -13,4 +13,4 @@ Product packshots are generated placeholders, not photography.
 | `/images/home/category-lounge.jpg` | Pexels contributor | [link](https://www.pexels.com/photo/14642652/) |
 | `/images/home/category-socks.jpg` | Pexels contributor | [link](https://www.pexels.com/photo/5746076/) |
 | `/images/home/category-vests.jpg` | Pexels contributor | [link](https://www.pexels.com/photo/31155535/) |
-| `/images/home/hero.jpg` | Pexels contributor | [link](https://www.pexels.com/photo/5253422/) |
+| `/images/home/hero.jpg` | Pexels contributor | [link](https://www.pexels.com/photo/32735440/) |

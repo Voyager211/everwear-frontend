@@ -59,9 +59,12 @@ const PICK = Number(arg('--pick', 1)) || 1
 const SLOTS = [
   {
     id: 'hero',
-    photoId: 5253422,
+    // Men's innerwear, backlit at a window. Chosen on three counts: the left third crops to
+    // empty white (the red headline sits there), the garment is clearly visible, and the waistband
+    // carries no third-party logo — several otherwise-good candidates showed competitor branding.
+    photoId: 32735440,
     path: 'images/home/hero.jpg',
-    query: 'neutral beige minimal fashion studio',
+    query: 'man underwear studio',
     orientation: 'landscape',
     w: 2560,
     h: 1440,
