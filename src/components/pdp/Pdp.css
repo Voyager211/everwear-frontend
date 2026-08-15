@@ -14,8 +14,10 @@
 .gallery__img {
   width: 100%;
   aspect-ratio: 3 / 4;
-  object-fit: cover;
-  background: var(--c-band);
+  /* `contain`, not `cover` — supplied photography frames the whole garment, and cropping it to
+     fill the tile cuts the product. The white matte matches the photos' own background. */
+  object-fit: contain;
+  background: #ffffff;
 }
 
 .gallery__img--wide {
@@ -95,6 +97,7 @@
   aspect-ratio: 2 / 3;
   object-fit: contain;
   background: var(--c-band);
+  mix-blend-mode: multiply;
 }
 
 .colourbox.is-selected {

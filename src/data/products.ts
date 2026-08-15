@@ -16,20 +16,12 @@ export const products: Product[] = [
         key: 'black',
         name: 'Black',
         hex: '#1a1a1a',
-        packshot: '/images/products/10-pack-short-cotton-trunks/black/packshot.svg',
-        swatchImage: '/images/products/10-pack-short-cotton-trunks/black/packshot.svg',
+        packshot: '/images/products/10-pack-short-cotton-trunks/black/packshot.jpg',
+        swatchImage: '/images/products/10-pack-short-cotton-trunks/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/10-pack-short-cotton-trunks/black/01-model.svg',
+            src: '/images/products/10-pack-short-cotton-trunks/black/packshot.jpg',
             span: 2
-          },
-          {
-            src: '/images/products/10-pack-short-cotton-trunks/black/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 1
           }
         ]
       }
@@ -124,72 +116,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/5-pack-cotton-short-trunks/black/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-short-trunks/black/packshot.svg',
+        packshot: '/images/products/5-pack-cotton-short-trunks/black/packshot.jpg',
+        swatchImage: '/images/products/5-pack-cotton-short-trunks/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/5-pack-cotton-short-trunks/black/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/5-pack-cotton-short-trunks/black/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'navy',
-        name: 'Navy',
-        hex: '#232f47',
-        packshot: '/images/products/5-pack-cotton-short-trunks/navy/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-short-trunks/navy/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-cotton-short-trunks/navy/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-navy.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'burgundy',
-        name: 'Burgundy',
-        hex: '#5e2230',
-        packshot: '/images/products/5-pack-cotton-short-trunks/burgundy/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-short-trunks/burgundy/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-cotton-short-trunks/burgundy/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-burgundy.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'grey',
-        name: 'Grey melange',
-        hex: '#9a9a9a',
-        packshot: '/images/products/5-pack-cotton-short-trunks/grey/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-short-trunks/grey/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-cotton-short-trunks/grey/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-grey.svg',
+            src: '/images/products/5-pack-cotton-short-trunks/black/packshot.jpg',
             span: 2
           }
         ]
@@ -286,55 +219,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/5-pack-short-trunks-with-lycra/black/packshot.svg',
-        swatchImage: '/images/products/5-pack-short-trunks-with-lycra/black/packshot.svg',
+        packshot: '/images/products/5-pack-short-trunks-with-lycra/black/packshot.jpg',
+        swatchImage: '/images/products/5-pack-short-trunks-with-lycra/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/5-pack-short-trunks-with-lycra/black/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/5-pack-short-trunks-with-lycra/black/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'teal',
-        name: 'Teal',
-        hex: '#2f5f5c',
-        packshot: '/images/products/5-pack-short-trunks-with-lycra/teal/packshot.svg',
-        swatchImage: '/images/products/5-pack-short-trunks-with-lycra/teal/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-short-trunks-with-lycra/teal/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-teal.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'grey',
-        name: 'Grey melange',
-        hex: '#9a9a9a',
-        packshot: '/images/products/5-pack-short-trunks-with-lycra/grey/packshot.svg',
-        swatchImage: '/images/products/5-pack-short-trunks-with-lycra/grey/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-short-trunks-with-lycra/grey/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-grey.svg',
+            src: '/images/products/5-pack-short-trunks-with-lycra/black/packshot.jpg',
             span: 2
           }
         ]
@@ -431,38 +322,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/3-pack-cotton-short-trunks/black/packshot.svg',
-        swatchImage: '/images/products/3-pack-cotton-short-trunks/black/packshot.svg',
+        packshot: '/images/products/3-pack-cotton-short-trunks/black/packshot.jpg',
+        swatchImage: '/images/products/3-pack-cotton-short-trunks/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-cotton-short-trunks/black/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/3-pack-cotton-short-trunks/black/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'navy',
-        name: 'Navy',
-        hex: '#232f47',
-        packshot: '/images/products/3-pack-cotton-short-trunks/navy/packshot.svg',
-        swatchImage: '/images/products/3-pack-cotton-short-trunks/navy/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-cotton-short-trunks/navy/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-navy.svg',
+            src: '/images/products/3-pack-cotton-short-trunks/black/packshot.jpg',
             span: 2
           }
         ]
@@ -556,55 +422,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'teal',
-        name: 'Teal',
+        name: 'Assorted',
         hex: '#2f5f5c',
-        packshot: '/images/products/3-pack-coolmax-mid-trunks/teal/packshot.svg',
-        swatchImage: '/images/products/3-pack-coolmax-mid-trunks/teal/packshot.svg',
+        packshot: '/images/products/3-pack-coolmax-mid-trunks/teal/packshot.jpg',
+        swatchImage: '/images/products/3-pack-coolmax-mid-trunks/teal/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-coolmax-mid-trunks/teal/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/3-pack-coolmax-mid-trunks/teal/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-teal.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'black',
-        name: 'Black',
-        hex: '#1a1a1a',
-        packshot: '/images/products/3-pack-coolmax-mid-trunks/black/packshot.svg',
-        swatchImage: '/images/products/3-pack-coolmax-mid-trunks/black/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-coolmax-mid-trunks/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'olive',
-        name: 'Olive',
-        hex: '#4a4f3a',
-        packshot: '/images/products/3-pack-coolmax-mid-trunks/olive/packshot.svg',
-        swatchImage: '/images/products/3-pack-coolmax-mid-trunks/olive/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-coolmax-mid-trunks/olive/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-olive.svg',
+            src: '/images/products/3-pack-coolmax-mid-trunks/teal/packshot.jpg',
             span: 2
           }
         ]
@@ -701,72 +525,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'burgundy',
-        name: 'Burgundy',
+        name: 'Assorted',
         hex: '#5e2230',
-        packshot: '/images/products/4-pack-woven-boxer-shorts/burgundy/packshot.svg',
-        swatchImage: '/images/products/4-pack-woven-boxer-shorts/burgundy/packshot.svg',
+        packshot: '/images/products/4-pack-woven-boxer-shorts/burgundy/packshot.jpg',
+        swatchImage: '/images/products/4-pack-woven-boxer-shorts/burgundy/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/4-pack-woven-boxer-shorts/burgundy/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/4-pack-woven-boxer-shorts/burgundy/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-burgundy.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'navy',
-        name: 'Navy',
-        hex: '#232f47',
-        packshot: '/images/products/4-pack-woven-boxer-shorts/navy/packshot.svg',
-        swatchImage: '/images/products/4-pack-woven-boxer-shorts/navy/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/4-pack-woven-boxer-shorts/navy/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-navy.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'sky',
-        name: 'Light blue',
-        hex: '#a8c4dd',
-        packshot: '/images/products/4-pack-woven-boxer-shorts/sky/packshot.svg',
-        swatchImage: '/images/products/4-pack-woven-boxer-shorts/sky/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/4-pack-woven-boxer-shorts/sky/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-sky.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'teal',
-        name: 'Teal',
-        hex: '#2f5f5c',
-        packshot: '/images/products/4-pack-woven-boxer-shorts/teal/packshot.svg',
-        swatchImage: '/images/products/4-pack-woven-boxer-shorts/teal/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/4-pack-woven-boxer-shorts/teal/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-teal.svg',
+            src: '/images/products/4-pack-woven-boxer-shorts/burgundy/packshot.jpg',
             span: 2
           }
         ]
@@ -858,55 +623,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'sky',
-        name: 'Light blue',
+        name: 'Assorted',
         hex: '#a8c4dd',
-        packshot: '/images/products/3-pack-woven-boxer-shorts/sky/packshot.svg',
-        swatchImage: '/images/products/3-pack-woven-boxer-shorts/sky/packshot.svg',
+        packshot: '/images/products/3-pack-woven-boxer-shorts/sky/packshot.jpg',
+        swatchImage: '/images/products/3-pack-woven-boxer-shorts/sky/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-woven-boxer-shorts/sky/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/3-pack-woven-boxer-shorts/sky/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-sky.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'brown',
-        name: 'Dark brown',
-        hex: '#4a3a30',
-        packshot: '/images/products/3-pack-woven-boxer-shorts/brown/packshot.svg',
-        swatchImage: '/images/products/3-pack-woven-boxer-shorts/brown/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-woven-boxer-shorts/brown/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-brown.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'olive',
-        name: 'Olive',
-        hex: '#4a4f3a',
-        packshot: '/images/products/3-pack-woven-boxer-shorts/olive/packshot.svg',
-        swatchImage: '/images/products/3-pack-woven-boxer-shorts/olive/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-woven-boxer-shorts/olive/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-olive.svg',
+            src: '/images/products/3-pack-woven-boxer-shorts/sky/packshot.jpg',
             span: 2
           }
         ]
@@ -998,38 +721,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'white',
-        name: 'White',
+        name: 'Assorted',
         hex: '#f2f2f2',
-        packshot: '/images/products/5-pack-cotton-briefs/white/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-briefs/white/packshot.svg',
+        packshot: '/images/products/5-pack-cotton-briefs/white/packshot.jpg',
+        swatchImage: '/images/products/5-pack-cotton-briefs/white/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/5-pack-cotton-briefs/white/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/5-pack-cotton-briefs/white/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-white.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'black',
-        name: 'Black',
-        hex: '#1a1a1a',
-        packshot: '/images/products/5-pack-cotton-briefs/black/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-briefs/black/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-cotton-briefs/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
+            src: '/images/products/5-pack-cotton-briefs/white/packshot.jpg',
             span: 2
           }
         ]
@@ -1125,38 +823,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/3-pack-microfibre-trunks/black/packshot.svg',
-        swatchImage: '/images/products/3-pack-microfibre-trunks/black/packshot.svg',
+        packshot: '/images/products/3-pack-microfibre-trunks/black/packshot.jpg',
+        swatchImage: '/images/products/3-pack-microfibre-trunks/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-microfibre-trunks/black/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/3-pack-microfibre-trunks/black/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'grey',
-        name: 'Grey melange',
-        hex: '#9a9a9a',
-        packshot: '/images/products/3-pack-microfibre-trunks/grey/packshot.svg',
-        swatchImage: '/images/products/3-pack-microfibre-trunks/grey/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-microfibre-trunks/grey/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-grey.svg',
+            src: '/images/products/3-pack-microfibre-trunks/black/packshot.jpg',
             span: 2
           }
         ]
@@ -1248,38 +921,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/2-pack-long-trunks/black/packshot.svg',
-        swatchImage: '/images/products/2-pack-long-trunks/black/packshot.svg',
+        packshot: '/images/products/2-pack-long-trunks/black/packshot.jpg',
+        swatchImage: '/images/products/2-pack-long-trunks/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/2-pack-long-trunks/black/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/2-pack-long-trunks/black/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'navy',
-        name: 'Navy',
-        hex: '#232f47',
-        packshot: '/images/products/2-pack-long-trunks/navy/packshot.svg',
-        swatchImage: '/images/products/2-pack-long-trunks/navy/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/2-pack-long-trunks/navy/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-navy.svg',
+            src: '/images/products/2-pack-long-trunks/black/packshot.jpg',
             span: 2
           }
         ]
@@ -1371,55 +1019,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'white',
-        name: 'White',
+        name: 'Assorted',
         hex: '#f2f2f2',
-        packshot: '/images/products/3-pack-ribbed-cotton-vests/white/packshot.svg',
-        swatchImage: '/images/products/3-pack-ribbed-cotton-vests/white/packshot.svg',
+        packshot: '/images/products/3-pack-ribbed-cotton-vests/white/packshot.jpg',
+        swatchImage: '/images/products/3-pack-ribbed-cotton-vests/white/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-ribbed-cotton-vests/white/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/3-pack-ribbed-cotton-vests/white/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-white.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'black',
-        name: 'Black',
-        hex: '#1a1a1a',
-        packshot: '/images/products/3-pack-ribbed-cotton-vests/black/packshot.svg',
-        swatchImage: '/images/products/3-pack-ribbed-cotton-vests/black/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-ribbed-cotton-vests/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'grey',
-        name: 'Grey melange',
-        hex: '#9a9a9a',
-        packshot: '/images/products/3-pack-ribbed-cotton-vests/grey/packshot.svg',
-        swatchImage: '/images/products/3-pack-ribbed-cotton-vests/grey/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-ribbed-cotton-vests/grey/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-grey.svg',
+            src: '/images/products/3-pack-ribbed-cotton-vests/white/packshot.jpg',
             span: 2
           }
         ]
@@ -1515,38 +1121,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'white',
-        name: 'White',
+        name: 'Assorted',
         hex: '#f2f2f2',
-        packshot: '/images/products/5-pack-cotton-vests/white/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-vests/white/packshot.svg',
+        packshot: '/images/products/5-pack-cotton-vests/white/packshot.jpg',
+        swatchImage: '/images/products/5-pack-cotton-vests/white/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/5-pack-cotton-vests/white/01-model.svg',
-            span: 2
-          },
-          {
-            src: '/images/products/5-pack-cotton-vests/white/packshot.svg',
-            span: 1
-          },
-          {
-            src: '/images/shared/detail-white.svg',
-            span: 1
-          }
-        ]
-      },
-      {
-        key: 'black',
-        name: 'Black',
-        hex: '#1a1a1a',
-        packshot: '/images/products/5-pack-cotton-vests/black/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-vests/black/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-cotton-vests/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
+            src: '/images/products/5-pack-cotton-vests/white/packshot.jpg',
             span: 2
           }
         ]
@@ -1640,51 +1221,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/seamless-performance-trunks/black/packshot.svg',
-        swatchImage: '/images/products/seamless-performance-trunks/black/packshot.svg',
+        packshot: '/images/products/seamless-performance-trunks/black/packshot.jpg',
+        swatchImage: '/images/products/seamless-performance-trunks/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/seamless-performance-trunks/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'olive',
-        name: 'Olive',
-        hex: '#4a4f3a',
-        packshot: '/images/products/seamless-performance-trunks/olive/packshot.svg',
-        swatchImage: '/images/products/seamless-performance-trunks/olive/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/seamless-performance-trunks/olive/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-olive.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'navy',
-        name: 'Navy',
-        hex: '#232f47',
-        packshot: '/images/products/seamless-performance-trunks/navy/packshot.svg',
-        swatchImage: '/images/products/seamless-performance-trunks/navy/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/seamless-performance-trunks/navy/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-navy.svg',
+            src: '/images/products/seamless-performance-trunks/black/packshot.jpg',
             span: 2
           }
         ]
@@ -1777,51 +1320,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'brown',
-        name: 'Dark brown',
+        name: 'Assorted',
         hex: '#4a3a30',
-        packshot: '/images/products/3-pack-modal-trunks/brown/packshot.svg',
-        swatchImage: '/images/products/3-pack-modal-trunks/brown/packshot.svg',
+        packshot: '/images/products/3-pack-modal-trunks/brown/packshot.jpg',
+        swatchImage: '/images/products/3-pack-modal-trunks/brown/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-modal-trunks/brown/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-brown.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'black',
-        name: 'Black',
-        hex: '#1a1a1a',
-        packshot: '/images/products/3-pack-modal-trunks/black/packshot.svg',
-        swatchImage: '/images/products/3-pack-modal-trunks/black/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-modal-trunks/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'sage',
-        name: 'Sage',
-        hex: '#9aab96',
-        packshot: '/images/products/3-pack-modal-trunks/sage/packshot.svg',
-        swatchImage: '/images/products/3-pack-modal-trunks/sage/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-modal-trunks/sage/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-sage.svg',
+            src: '/images/products/3-pack-modal-trunks/brown/packshot.jpg',
             span: 2
           }
         ]
@@ -1918,34 +1423,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/3-pack-boxer-briefs-with-drymove/black/packshot.svg',
-        swatchImage: '/images/products/3-pack-boxer-briefs-with-drymove/black/packshot.svg',
+        packshot: '/images/products/3-pack-boxer-briefs-with-drymove/black/packshot.jpg',
+        swatchImage: '/images/products/3-pack-boxer-briefs-with-drymove/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-boxer-briefs-with-drymove/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'navy',
-        name: 'Navy',
-        hex: '#232f47',
-        packshot: '/images/products/3-pack-boxer-briefs-with-drymove/navy/packshot.svg',
-        swatchImage: '/images/products/3-pack-boxer-briefs-with-drymove/navy/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-boxer-briefs-with-drymove/navy/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-navy.svg',
+            src: '/images/products/3-pack-boxer-briefs-with-drymove/black/packshot.jpg',
             span: 2
           }
         ]
@@ -2037,34 +1521,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/2-pack-thermal-long-johns/black/packshot.svg',
-        swatchImage: '/images/products/2-pack-thermal-long-johns/black/packshot.svg',
+        packshot: '/images/products/2-pack-thermal-long-johns/black/packshot.jpg',
+        swatchImage: '/images/products/2-pack-thermal-long-johns/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/2-pack-thermal-long-johns/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'grey',
-        name: 'Grey melange',
-        hex: '#9a9a9a',
-        packshot: '/images/products/2-pack-thermal-long-johns/grey/packshot.svg',
-        swatchImage: '/images/products/2-pack-thermal-long-johns/grey/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/2-pack-thermal-long-johns/grey/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-grey.svg',
+            src: '/images/products/2-pack-thermal-long-johns/black/packshot.jpg',
             span: 2
           }
         ]
@@ -2156,34 +1619,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'grey',
-        name: 'Grey melange',
+        name: 'Assorted',
         hex: '#9a9a9a',
-        packshot: '/images/products/3-pack-jersey-boxer-shorts/grey/packshot.svg',
-        swatchImage: '/images/products/3-pack-jersey-boxer-shorts/grey/packshot.svg',
+        packshot: '/images/products/3-pack-jersey-boxer-shorts/grey/packshot.jpg',
+        swatchImage: '/images/products/3-pack-jersey-boxer-shorts/grey/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-jersey-boxer-shorts/grey/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-grey.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'navy',
-        name: 'Navy',
-        hex: '#232f47',
-        packshot: '/images/products/3-pack-jersey-boxer-shorts/navy/packshot.svg',
-        swatchImage: '/images/products/3-pack-jersey-boxer-shorts/navy/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-jersey-boxer-shorts/navy/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-navy.svg',
+            src: '/images/products/3-pack-jersey-boxer-shorts/grey/packshot.jpg',
             span: 2
           }
         ]
@@ -2275,51 +1717,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/5-pack-mid-rise-briefs/black/packshot.svg',
-        swatchImage: '/images/products/5-pack-mid-rise-briefs/black/packshot.svg',
+        packshot: '/images/products/5-pack-mid-rise-briefs/black/packshot.jpg',
+        swatchImage: '/images/products/5-pack-mid-rise-briefs/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/5-pack-mid-rise-briefs/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'white',
-        name: 'White',
-        hex: '#f2f2f2',
-        packshot: '/images/products/5-pack-mid-rise-briefs/white/packshot.svg',
-        swatchImage: '/images/products/5-pack-mid-rise-briefs/white/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-mid-rise-briefs/white/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-white.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'grey',
-        name: 'Grey melange',
-        hex: '#9a9a9a',
-        packshot: '/images/products/5-pack-mid-rise-briefs/grey/packshot.svg',
-        swatchImage: '/images/products/5-pack-mid-rise-briefs/grey/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-mid-rise-briefs/grey/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-grey.svg',
+            src: '/images/products/5-pack-mid-rise-briefs/black/packshot.jpg',
             span: 2
           }
         ]

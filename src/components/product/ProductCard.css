@@ -21,6 +21,10 @@
 .card__imglink img {
   object-fit: contain;
   padding: 12% 14%;
+  /* Supplied product photography is shot on white. Multiplying against the band dissolves that
+     white into the tile instead of leaving a visible rectangle around every product. The band is
+     #f5f5f5, so the darkening this applies to the garment itself is imperceptible. */
+  mix-blend-mode: multiply;
 }
 
 /* Arrows page through the product's images in place — not a hover swap. */

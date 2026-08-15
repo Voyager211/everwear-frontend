@@ -80,6 +80,34 @@ The Pexels licence doesn't require attribution, but the client should have the r
 > **Note:** Pexels fingerprints TLS clients, so these scripts shell out to `curl` — Node's built-in
 > `fetch` gets a 403 with identical headers.
 
+## Importing supplied product photography
+
+When real product shots arrive — one file per product, **named exactly as the product appears on
+the page** — drop them in a folder and run:
+
+```bash
+node scripts/import-photos.mjs "C:/path/to/Men" --category men --dry-run
+node scripts/import-photos.mjs "C:/path/to/Men" --category men
+npm run assets      # repoints the catalogue at the real files
+```
+
+Matching ignores case, punctuation and trademark symbols, so `3-PACK BOXER BRIEFS WITH DRYMOVE.jpg`
+still matches `3-PACK BOXER BRIEFS WITH DRYMOVE™`. The importer reports any product it couldn't
+match and any file that matched nothing.
+
+`npm run assets` then does the rest automatically:
+
+- a colourway with a real `packshot.jpg` keeps it — placeholders are **never** written over it
+- that product's page gallery becomes the supplied photo alone, rather than mixing one real
+  photograph with generated ones
+- if a single photo covers several colourways, the colourways **collapse to one entry labelled
+  "Assorted"** — otherwise the page shows identical swatch thumbnails under a colour name the
+  photo contradicts. Supply per-colour photos later and the colourways come back on their own.
+
+**Photos shot on white are expected.** The grid tiles apply `mix-blend-mode: multiply`, which
+dissolves a white photo background into the `#F5F5F5` band instead of leaving a visible rectangle
+around every product. No cut-outs or transparency needed.
+
 ## Generating the product packshots
 
 `image-manifest.csv` in the repo root lists every image with its path, dimensions, background and a

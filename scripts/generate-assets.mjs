@@ -12,7 +12,7 @@
  * drops into the same paths with the same basenames — see public/images/README.md.
  */
 
-import { mkdirSync, writeFileSync, rmSync, existsSync } from 'node:fs'
+import { mkdirSync, writeFileSync, rmSync, existsSync, readdirSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 
@@ -418,9 +418,27 @@ export function galleryFor({ slug, colourKey, hasModel }) {
   ].filter(Boolean)
 }
 
+/** Real photography wins. Clear out stale placeholders without touching supplied .jpg/.png. */
+function clearPlaceholders(dir) {
+  if (!existsSync(dir)) return
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const path = join(dir, entry.name)
+    if (entry.isDirectory()) clearPlaceholders(path)
+    else if (entry.name.endsWith('.svg')) rmSync(path, { force: true })
+  }
+}
+
+/** Which real photo, if any, has been supplied for this colourway. */
+function suppliedPhoto(dir) {
+  for (const ext of ['jpg', 'png', 'webp']) {
+    if (existsSync(join(dir, `packshot.${ext}`))) return ext
+  }
+  return null
+}
+
 function build() {
-  rmSync(join(IMG, 'products'), { recursive: true, force: true })
-  rmSync(join(IMG, 'shared'), { recursive: true, force: true })
+  clearPlaceholders(join(IMG, 'products'))
+  clearPlaceholders(join(IMG, 'shared'))
   mkdirSync(join(IMG, 'home'), { recursive: true })
   mkdirSync(join(IMG, 'shared'), { recursive: true })
   if (!REAL) writeHomeImages()
@@ -435,10 +453,13 @@ function build() {
 
     const colors = colourKeys.map((key, colourIndex) => {
       const main = C[key]
-      const hasModel = isHero && colourIndex === 0
       const dir = join(IMG, 'products', slug, key)
+      const photo = suppliedPhoto(dir)
+      // A real photo replaces the generated model shot too — one real image beside a drawn one
+      // reads worse than the real image alone.
+      const hasModel = isHero && colourIndex === 0 && !photo
 
-      if (!REAL) {
+      if (!REAL && !photo) {
         mkdirSync(dir, { recursive: true })
         writeFileSync(join(dir, 'packshot.svg'), packshot(type, main))
         imageCount += 1
@@ -446,28 +467,40 @@ function build() {
           writeFileSync(join(dir, '01-model.svg'), modelShot(type, main, { w: 1600, h: 2100 }))
           imageCount += 1
         }
-        if (!sharedColours.has(key)) {
-          writeFileSync(
-            join(IMG, 'shared', `detail-${key}.svg`),
-            detailShot(main, { w: 1600, h: 2100 }),
-          )
-          imageCount += 1
-        }
+      }
+      if (!REAL && !sharedColours.has(key)) {
+        writeFileSync(join(IMG, 'shared', `detail-${key}.svg`), detailShot(main, { w: 1600, h: 2100 }))
+        imageCount += 1
       }
       sharedColours.add(key)
 
       const base = `/images/products/${slug}/${key}`
+      const src = `${base}/packshot.${photo ?? EXT}`
       return {
         key,
         name: NAMES[key],
         hex: main,
-        packshot: `${base}/packshot.${EXT}`,
+        packshot: src,
         // The packshot is already a clean flat-lay on the band colour — a separate swatch
         // crop would be the same photograph at a smaller size.
-        swatchImage: `${base}/packshot.${EXT}`,
-        gallery: galleryFor({ slug, colourKey: key, hasModel }),
+        swatchImage: src,
+        // Supplied photography carries the product detail page on its own.
+        gallery: photo ? [{ src, span: 2 }] : galleryFor({ slug, colourKey: key, hasModel }),
       }
     })
+
+    /**
+     * One supplied photograph covers the whole product, so every colourway resolves to the same
+     * image. Left alone that renders as N identical swatch thumbnails under a colour name the
+     * photo contradicts ("COLOUR: Black" over a five-pack of blues). Collapse to a single entry
+     * and label a multipack honestly. Supply per-colour photos later and the colourways return
+     * on their own.
+     */
+    const oneSuppliedPhoto = colourKeys.some((key) =>
+      suppliedPhoto(join(IMG, 'products', slug, key)),
+    )
+    const collapsed =
+      oneSuppliedPhoto && colors.length > 1 ? [{ ...colors[0], name: 'Assorted' }] : colors
 
     // A couple of sizes short in the middle of the run, like the reference.
     const lowIndex = index % 3 === 0 ? 2 : -1
@@ -484,7 +517,7 @@ function build() {
       originalPrice: extra.sale,
       packSize,
       marketingLabel: extra.label,
-      colors,
+      colors: collapsed,
       sizes: sizes.map((label, i) => ({
         label,
         inStock: i !== outIndex,

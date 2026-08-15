@@ -144,6 +144,8 @@
   width: 100%;
   aspect-ratio: 5 / 7;
   object-fit: contain;
+  /* See ProductCard.css — dissolves white photo backgrounds into the band. */
+  mix-blend-mode: multiply;
   transition: scale 0.3s var(--ease);
 }
 
