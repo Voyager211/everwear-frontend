@@ -1814,51 +1814,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/3-pack-cotton-hipster-briefs/black/packshot.svg',
-        swatchImage: '/images/products/3-pack-cotton-hipster-briefs/black/packshot.svg',
+        packshot: '/images/products/3-pack-cotton-hipster-briefs/black/packshot.jpg',
+        swatchImage: '/images/products/3-pack-cotton-hipster-briefs/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-cotton-hipster-briefs/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'blush',
-        name: 'Blush',
-        hex: '#d8a9a9',
-        packshot: '/images/products/3-pack-cotton-hipster-briefs/blush/packshot.svg',
-        swatchImage: '/images/products/3-pack-cotton-hipster-briefs/blush/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-cotton-hipster-briefs/blush/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-blush.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'white',
-        name: 'White',
-        hex: '#f2f2f2',
-        packshot: '/images/products/3-pack-cotton-hipster-briefs/white/packshot.svg',
-        swatchImage: '/images/products/3-pack-cotton-hipster-briefs/white/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-cotton-hipster-briefs/white/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-white.svg',
+            src: '/images/products/3-pack-cotton-hipster-briefs/black/packshot.jpg',
             span: 2
           }
         ]
@@ -1954,51 +1916,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'white',
-        name: 'White',
+        name: 'Assorted',
         hex: '#f2f2f2',
-        packshot: '/images/products/5-pack-cotton-briefs-women/white/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-briefs-women/white/packshot.svg',
+        packshot: '/images/products/5-pack-cotton-briefs-women/white/packshot.jpg',
+        swatchImage: '/images/products/5-pack-cotton-briefs-women/white/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/5-pack-cotton-briefs-women/white/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-white.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'black',
-        name: 'Black',
-        hex: '#1a1a1a',
-        packshot: '/images/products/5-pack-cotton-briefs-women/black/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-briefs-women/black/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-cotton-briefs-women/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'sage',
-        name: 'Sage',
-        hex: '#9aab96',
-        packshot: '/images/products/5-pack-cotton-briefs-women/sage/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-briefs-women/sage/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-cotton-briefs-women/sage/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-sage.svg',
+            src: '/images/products/5-pack-cotton-briefs-women/white/packshot.jpg',
             span: 2
           }
         ]
@@ -2089,34 +2013,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/3-pack-seamless-thongs/black/packshot.svg',
-        swatchImage: '/images/products/3-pack-seamless-thongs/black/packshot.svg',
+        packshot: '/images/products/3-pack-seamless-thongs/black/packshot.jpg',
+        swatchImage: '/images/products/3-pack-seamless-thongs/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-seamless-thongs/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'beige',
-        name: 'Beige',
-        hex: '#c8b49b',
-        packshot: '/images/products/3-pack-seamless-thongs/beige/packshot.svg',
-        swatchImage: '/images/products/3-pack-seamless-thongs/beige/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-seamless-thongs/beige/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-beige.svg',
+            src: '/images/products/3-pack-seamless-thongs/black/packshot.jpg',
             span: 2
           }
         ]
@@ -2208,34 +2111,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/2-pack-soft-bralettes/black/packshot.svg',
-        swatchImage: '/images/products/2-pack-soft-bralettes/black/packshot.svg',
+        packshot: '/images/products/2-pack-soft-bralettes/black/packshot.jpg',
+        swatchImage: '/images/products/2-pack-soft-bralettes/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/2-pack-soft-bralettes/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'blush',
-        name: 'Blush',
-        hex: '#d8a9a9',
-        packshot: '/images/products/2-pack-soft-bralettes/blush/packshot.svg',
-        swatchImage: '/images/products/2-pack-soft-bralettes/blush/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/2-pack-soft-bralettes/blush/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-blush.svg',
+            src: '/images/products/2-pack-soft-bralettes/black/packshot.jpg',
             span: 2
           }
         ]
@@ -2331,51 +2213,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'beige',
-        name: 'Beige',
+        name: 'Assorted',
         hex: '#c8b49b',
-        packshot: '/images/products/non-wired-cotton-bra/beige/packshot.svg',
-        swatchImage: '/images/products/non-wired-cotton-bra/beige/packshot.svg',
+        packshot: '/images/products/non-wired-cotton-bra/beige/packshot.jpg',
+        swatchImage: '/images/products/non-wired-cotton-bra/beige/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/non-wired-cotton-bra/beige/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-beige.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'black',
-        name: 'Black',
-        hex: '#1a1a1a',
-        packshot: '/images/products/non-wired-cotton-bra/black/packshot.svg',
-        swatchImage: '/images/products/non-wired-cotton-bra/black/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/non-wired-cotton-bra/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'white',
-        name: 'White',
-        hex: '#f2f2f2',
-        packshot: '/images/products/non-wired-cotton-bra/white/packshot.svg',
-        swatchImage: '/images/products/non-wired-cotton-bra/white/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/non-wired-cotton-bra/white/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-white.svg',
+            src: '/images/products/non-wired-cotton-bra/beige/packshot.jpg',
             span: 2
           }
         ]
@@ -2469,51 +2313,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/lace-trim-bralette/black/packshot.svg',
-        swatchImage: '/images/products/lace-trim-bralette/black/packshot.svg',
+        packshot: '/images/products/lace-trim-bralette/black/packshot.jpg',
+        swatchImage: '/images/products/lace-trim-bralette/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/lace-trim-bralette/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'blush',
-        name: 'Blush',
-        hex: '#d8a9a9',
-        packshot: '/images/products/lace-trim-bralette/blush/packshot.svg',
-        swatchImage: '/images/products/lace-trim-bralette/blush/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/lace-trim-bralette/blush/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-blush.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'sage',
-        name: 'Sage',
-        hex: '#9aab96',
-        packshot: '/images/products/lace-trim-bralette/sage/packshot.svg',
-        swatchImage: '/images/products/lace-trim-bralette/sage/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/lace-trim-bralette/sage/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-sage.svg',
+            src: '/images/products/lace-trim-bralette/black/packshot.jpg',
             span: 2
           }
         ]
@@ -2606,34 +2412,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/3-pack-microfibre-hipsters/black/packshot.svg',
-        swatchImage: '/images/products/3-pack-microfibre-hipsters/black/packshot.svg',
+        packshot: '/images/products/3-pack-microfibre-hipsters/black/packshot.jpg',
+        swatchImage: '/images/products/3-pack-microfibre-hipsters/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-microfibre-hipsters/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'navy',
-        name: 'Navy',
-        hex: '#232f47',
-        packshot: '/images/products/3-pack-microfibre-hipsters/navy/packshot.svg',
-        swatchImage: '/images/products/3-pack-microfibre-hipsters/navy/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-microfibre-hipsters/navy/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-navy.svg',
+            src: '/images/products/3-pack-microfibre-hipsters/black/packshot.jpg',
             span: 2
           }
         ]
@@ -2724,51 +2509,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/5-pack-cotton-thongs/black/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-thongs/black/packshot.svg',
+        packshot: '/images/products/5-pack-cotton-thongs/black/packshot.jpg',
+        swatchImage: '/images/products/5-pack-cotton-thongs/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/5-pack-cotton-thongs/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'white',
-        name: 'White',
-        hex: '#f2f2f2',
-        packshot: '/images/products/5-pack-cotton-thongs/white/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-thongs/white/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-cotton-thongs/white/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-white.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'blush',
-        name: 'Blush',
-        hex: '#d8a9a9',
-        packshot: '/images/products/5-pack-cotton-thongs/blush/packshot.svg',
-        swatchImage: '/images/products/5-pack-cotton-thongs/blush/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/5-pack-cotton-thongs/blush/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-blush.svg',
+            src: '/images/products/5-pack-cotton-thongs/black/packshot.jpg',
             span: 2
           }
         ]
@@ -2860,34 +2607,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'white',
-        name: 'White',
+        name: 'Assorted',
         hex: '#f2f2f2',
-        packshot: '/images/products/2-pack-camisoles/white/packshot.svg',
-        swatchImage: '/images/products/2-pack-camisoles/white/packshot.svg',
+        packshot: '/images/products/2-pack-camisoles/white/packshot.jpg',
+        swatchImage: '/images/products/2-pack-camisoles/white/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/2-pack-camisoles/white/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-white.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'black',
-        name: 'Black',
-        hex: '#1a1a1a',
-        packshot: '/images/products/2-pack-camisoles/black/packshot.svg',
-        swatchImage: '/images/products/2-pack-camisoles/black/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/2-pack-camisoles/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
+            src: '/images/products/2-pack-camisoles/white/packshot.jpg',
             span: 2
           }
         ]
@@ -2980,51 +2706,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'white',
-        name: 'White',
+        name: 'Assorted',
         hex: '#f2f2f2',
-        packshot: '/images/products/ribbed-cotton-vest-top/white/packshot.svg',
-        swatchImage: '/images/products/ribbed-cotton-vest-top/white/packshot.svg',
+        packshot: '/images/products/ribbed-cotton-vest-top/white/packshot.jpg',
+        swatchImage: '/images/products/ribbed-cotton-vest-top/white/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/ribbed-cotton-vest-top/white/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-white.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'sage',
-        name: 'Sage',
-        hex: '#9aab96',
-        packshot: '/images/products/ribbed-cotton-vest-top/sage/packshot.svg',
-        swatchImage: '/images/products/ribbed-cotton-vest-top/sage/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/ribbed-cotton-vest-top/sage/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-sage.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'black',
-        name: 'Black',
-        hex: '#1a1a1a',
-        packshot: '/images/products/ribbed-cotton-vest-top/black/packshot.svg',
-        swatchImage: '/images/products/ribbed-cotton-vest-top/black/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/ribbed-cotton-vest-top/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
+            src: '/images/products/ribbed-cotton-vest-top/white/packshot.jpg',
             span: 2
           }
         ]
@@ -3116,34 +2804,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/3-pack-high-waist-briefs/black/packshot.svg',
-        swatchImage: '/images/products/3-pack-high-waist-briefs/black/packshot.svg',
+        packshot: '/images/products/3-pack-high-waist-briefs/black/packshot.jpg',
+        swatchImage: '/images/products/3-pack-high-waist-briefs/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/3-pack-high-waist-briefs/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'beige',
-        name: 'Beige',
-        hex: '#c8b49b',
-        packshot: '/images/products/3-pack-high-waist-briefs/beige/packshot.svg',
-        swatchImage: '/images/products/3-pack-high-waist-briefs/beige/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/3-pack-high-waist-briefs/beige/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-beige.svg',
+            src: '/images/products/3-pack-high-waist-briefs/black/packshot.jpg',
             span: 2
           }
         ]
@@ -3239,34 +2906,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'black',
-        name: 'Black',
+        name: 'Assorted',
         hex: '#1a1a1a',
-        packshot: '/images/products/sports-bra-medium-support/black/packshot.svg',
-        swatchImage: '/images/products/sports-bra-medium-support/black/packshot.svg',
+        packshot: '/images/products/sports-bra-medium-support/black/packshot.jpg',
+        swatchImage: '/images/products/sports-bra-medium-support/black/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/sports-bra-medium-support/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'olive',
-        name: 'Olive',
-        hex: '#4a4f3a',
-        packshot: '/images/products/sports-bra-medium-support/olive/packshot.svg',
-        swatchImage: '/images/products/sports-bra-medium-support/olive/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/sports-bra-medium-support/olive/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-olive.svg',
+            src: '/images/products/sports-bra-medium-support/black/packshot.jpg',
             span: 2
           }
         ]
@@ -3363,34 +3009,13 @@ export const products: Product[] = [
     colors: [
       {
         key: 'brown',
-        name: 'Dark brown',
+        name: 'Assorted',
         hex: '#4a3a30',
-        packshot: '/images/products/2-pack-modal-bralettes/brown/packshot.svg',
-        swatchImage: '/images/products/2-pack-modal-bralettes/brown/packshot.svg',
+        packshot: '/images/products/2-pack-modal-bralettes/brown/packshot.jpg',
+        swatchImage: '/images/products/2-pack-modal-bralettes/brown/packshot.jpg',
         gallery: [
           {
-            src: '/images/products/2-pack-modal-bralettes/brown/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-brown.svg',
-            span: 2
-          }
-        ]
-      },
-      {
-        key: 'black',
-        name: 'Black',
-        hex: '#1a1a1a',
-        packshot: '/images/products/2-pack-modal-bralettes/black/packshot.svg',
-        swatchImage: '/images/products/2-pack-modal-bralettes/black/packshot.svg',
-        gallery: [
-          {
-            src: '/images/products/2-pack-modal-bralettes/black/packshot.svg',
-            span: 2
-          },
-          {
-            src: '/images/shared/detail-black.svg',
+            src: '/images/products/2-pack-modal-bralettes/brown/packshot.jpg',
             span: 2
           }
         ]
