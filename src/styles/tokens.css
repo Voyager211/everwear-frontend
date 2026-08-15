@@ -1,0 +1,58 @@
+:root {
+  /* colour */
+  --c-bg: #ffffff;
+  --c-fg: #222222;
+  --c-fg-muted: #767676;
+  --c-hairline: #e5e5e5;
+  --c-band: #f5f5f5;
+  --c-brand: #e50010;
+  --c-warm: #8b6f47;
+  --c-sale: var(--c-brand);
+  --c-inverse-bg: #000000;
+  --c-inverse-fg: #ffffff;
+
+  /* type */
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-display: 'Arial Narrow', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --fs-micro: 11px;
+  --fs-label: 13px;
+  --fs-body: 14px;
+  --fs-nav: 15px;
+  --fs-lead: 17px;
+  --fs-price: 19px;
+  --fs-display: clamp(34px, 3.2vw, 60px);
+  --ls-caps: 0.02em;
+
+  /* space */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+
+  /* layout */
+  --page-pad: 30px;
+  --header-h: 72px;
+  --header-h-stuck: 58px;
+  --promobar-h: 48px;
+  --inset-w: 60vw;
+  --radius: 0;
+
+  /* motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 699px) {
+  :root {
+    --page-pad: 16px;
+    --header-h: 56px;
+    --header-h-stuck: 56px;
+    --promobar-h: 40px;
+    --inset-w: 100vw;
+  }
+}

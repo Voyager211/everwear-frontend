@@ -1,0 +1,200 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--s-6);
+}
+
+/* Image cell: 5:7, edge to edge, sitting on the band. */
+.card__media {
+  position: relative;
+  aspect-ratio: 5 / 7;
+  overflow: hidden;
+}
+
+.card__imglink,
+.card__imglink img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card__imglink img {
+  object-fit: contain;
+  padding: 12% 14%;
+}
+
+/* Arrows page through the product's images in place — not a hover swap. */
+.card__arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 60px;
+  color: var(--c-fg);
+  opacity: 0;
+  transition: opacity 0.15s var(--ease);
+}
+
+.card__arrow--prev {
+  left: 4px;
+}
+
+.card__arrow--next {
+  right: 4px;
+}
+
+.card:hover .card__arrow,
+.card__arrow:focus-visible {
+  opacity: 1;
+}
+
+/* Wishlist sits on the image, bottom right. */
+.card__heart {
+  position: absolute;
+  right: var(--page-pad);
+  bottom: var(--s-4);
+  color: var(--c-fg);
+}
+
+.card__text {
+  display: grid;
+  gap: 3px;
+  padding: var(--s-3) var(--page-pad) 0;
+}
+
+.card__concept {
+  color: var(--c-warm);
+  font-size: var(--fs-body);
+}
+
+/* Caps, regular weight, one line with an ellipsis. */
+.card__name {
+  font-size: var(--fs-nav);
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__name:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* The price is the heaviest text in the card. */
+.price {
+  font-size: var(--fs-nav);
+  font-weight: 700;
+}
+
+.price--sale {
+  color: var(--c-sale);
+}
+
+.price__was {
+  margin-left: var(--s-2);
+  color: var(--c-fg-muted);
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.packline {
+  font-size: var(--fs-label);
+}
+
+.packline__count {
+  color: var(--c-fg);
+}
+
+.packline__unit {
+  color: var(--c-warm);
+}
+
+.card__label {
+  font-size: var(--fs-label);
+}
+
+.swatches {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--s-2);
+}
+
+/* Squares, not dots. */
+.swatches__dot {
+  width: 11px;
+  height: 11px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.swatches__dot.is-active {
+  outline: 1px solid var(--c-fg);
+  outline-offset: 2px;
+}
+
+.swatches__more {
+  font-size: var(--fs-label);
+}
+
+/* ------------------------------------------------------------------- grid */
+
+/* Four columns, full bleed, zero gutter — cells butt directly together. */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+@media (max-width: 1099px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 699px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card__heart {
+    right: var(--s-2);
+  }
+}
+
+/* ------------------------------------------------------------------- rail */
+
+.rail {
+  position: relative;
+}
+
+.rail__track {
+  display: grid;
+  grid-auto-flow: column;
+  /* 4 visible + a peek of the 5th, which is what signals scrollability. */
+  grid-auto-columns: calc(100% / 4.35);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.rail__track::-webkit-scrollbar {
+  display: none;
+}
+
+.rail__track > * {
+  scroll-snap-align: start;
+}
+
+@media (max-width: 1099px) {
+  .rail__track {
+    grid-auto-columns: calc(100% / 3.2);
+  }
+}
+
+@media (max-width: 699px) {
+  .rail__track {
+    grid-auto-columns: calc(100% / 2.2);
+  }
+}

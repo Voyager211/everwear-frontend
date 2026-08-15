@@ -1,0 +1,209 @@
+/* ------------------------------------------------------------------- hero */
+
+.hero {
+  position: relative;
+  display: block;
+}
+
+.hero__img {
+  width: 100%;
+  height: clamp(420px, 62vh, 700px);
+  object-fit: cover;
+  object-position: 70% center;
+}
+
+/* Headline sits inside the image, bottom left. No scrim, no button. */
+.hero__headline {
+  position: absolute;
+  left: var(--page-pad);
+  bottom: var(--s-7);
+  display: grid;
+  gap: 0.06em;
+  color: var(--c-brand);
+}
+
+/* ------------------------------------------------------------------ offer */
+
+.offer {
+  padding: var(--s-5) var(--page-pad) var(--s-6);
+}
+
+.offer__body {
+  display: grid;
+  gap: 6px;
+}
+
+.offer__title {
+  font-size: var(--fs-nav);
+  font-weight: 700;
+}
+
+.offer__sub {
+  font-size: var(--fs-body);
+}
+
+.offer__timer {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--fs-nav);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Square bullet — the design never uses round ones. */
+.offer__bullet {
+  width: 9px;
+  height: 9px;
+  background: var(--c-fg);
+}
+
+.offer__fine {
+  margin-top: 6px;
+  font-size: var(--fs-label);
+}
+
+/* --------------------------------------------------------------- campaign */
+
+.campaign {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.campaign__col {
+  position: relative;
+}
+
+.campaign__imgwrap {
+  display: block;
+}
+
+/* Roughly twice the viewport height — that is what makes the sticky caption read. */
+.campaign__img {
+  width: 100%;
+  height: 200vh;
+  object-fit: cover;
+}
+
+.campaign__caption {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  min-height: 62px;
+  padding-inline: var(--page-pad);
+  background: var(--c-bg);
+  font-size: var(--fs-lead);
+}
+
+.hotspot {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: stretch;
+  translate: -50% -50%;
+}
+
+.hotspot__mark {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  background: var(--c-bg);
+  border: 1px solid var(--c-hairline);
+}
+
+.hotspot__mark::after {
+  content: '';
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--c-fg);
+}
+
+.hotspot__price {
+  padding: 5px 10px;
+  background: var(--c-bg);
+  border: 1px solid var(--c-hairline);
+  border-left: 0;
+  font-size: var(--fs-label);
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------------------- packshots */
+
+.packshots {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--s-6) var(--s-5);
+  padding: var(--s-7) var(--page-pad) var(--s-8);
+}
+
+.packshots__tile img {
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  object-fit: contain;
+  transition: scale 0.3s var(--ease);
+}
+
+.packshots__tile:hover img {
+  scale: 1.03;
+}
+
+/* --------------------------------------------------------- category tiles */
+
+/* The one inset module in the whole design. */
+.tilepair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  width: var(--inset-w);
+  margin: var(--s-8) auto;
+}
+
+.tilepair__tile img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: var(--c-band);
+}
+
+.tilepair__caption {
+  display: block;
+  margin-top: var(--s-4);
+  font-size: var(--fs-lead);
+}
+
+.tilepair__cta {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--fs-body);
+}
+
+.tilepair__tile:hover .tilepair__cta {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 899px) {
+  .campaign,
+  .tilepair {
+    grid-template-columns: 1fr;
+  }
+  .campaign__img {
+    height: 120vh;
+  }
+  .packshots {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero__headline {
+    bottom: var(--s-5);
+  }
+}
+
+@media (max-width: 699px) {
+  .packshots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

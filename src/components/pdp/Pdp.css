@@ -1,0 +1,233 @@
+/* Gallery flush to the left viewport edge; info column sticky in the right panel. */
+.pdp {
+  display: grid;
+  grid-template-columns: var(--pdp-gallery-w) 1fr;
+  align-items: start;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.gallery__img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: var(--c-band);
+}
+
+.gallery__img--wide {
+  grid-column: span 2;
+}
+
+.pdp-info {
+  position: sticky;
+  top: calc(var(--header-h-stuck) + var(--s-6));
+  /* Content is inset inside the panel — the whitespace is doing real work. */
+  width: min(var(--pdp-info-w), 100%);
+  margin-inline: auto;
+  padding: var(--s-8) var(--s-4) var(--s-9);
+}
+
+.pdp-info__namerow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-5);
+}
+
+.pdp-info__name {
+  font-size: var(--fs-lead);
+  font-weight: 400;
+}
+
+.pdp-info__heart {
+  flex: none;
+  color: var(--c-fg);
+}
+
+.pdp-info .price {
+  margin-top: 6px;
+  font-size: var(--fs-price);
+}
+
+.pdp-info__mrp {
+  margin-top: 2px;
+  font-size: var(--fs-body);
+}
+
+.pdp-info .packline {
+  margin-top: var(--s-3);
+}
+
+.pdp-info__colour {
+  margin-top: var(--s-8);
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-caps);
+}
+
+/* Only the value is sentence case. */
+.pdp-info__colourname {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.colourboxes {
+  display: flex;
+  gap: var(--s-3);
+  margin-top: var(--s-4);
+}
+
+/* An image thumbnail in a bordered box — not a colour dot. */
+.colourbox {
+  width: 116px;
+  padding: 4px;
+  border: 1px solid transparent;
+  background: var(--c-bg);
+}
+
+.colourbox img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  background: var(--c-band);
+}
+
+.colourbox.is-selected {
+  border-color: var(--c-fg);
+}
+
+.pdp-info__sizes {
+  margin-top: var(--s-8);
+}
+
+/* Connected lattice: negative margins collapse the shared borders. */
+.sizegrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.sizegrid__cell {
+  display: grid;
+  place-items: center;
+  min-height: 72px;
+  margin: 0 -1px -1px 0;
+  border: 1px solid var(--c-hairline);
+  font-size: 16px;
+  transition: border-color 0.15s var(--ease);
+}
+
+.sizegrid__cell:hover:not(:disabled) {
+  border-color: var(--c-fg);
+  position: relative;
+  z-index: 1;
+}
+
+.sizegrid__cell.is-selected {
+  position: relative;
+  z-index: 2;
+  border-color: var(--c-fg);
+  box-shadow: inset 0 0 0 1px var(--c-fg);
+}
+
+/* Low stock renders in the warm accent, as the reference's "M" does. */
+.sizegrid__cell.is-low {
+  color: var(--c-warm);
+}
+
+.sizegrid__cell.is-out {
+  color: var(--c-hairline);
+  text-decoration: line-through;
+  cursor: default;
+}
+
+.pdp-info__error {
+  margin-top: var(--s-3);
+  color: var(--c-brand);
+  font-size: var(--fs-nav);
+}
+
+.pdp-info__guide {
+  display: block;
+  margin: var(--s-5) 0 var(--s-5) auto;
+  font-size: 16px;
+}
+
+.pdp-info .btn {
+  margin-top: var(--s-2);
+}
+
+.pdp-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  margin-top: var(--s-7);
+  font-size: var(--fs-lead);
+}
+
+.pdp-info__accordions {
+  margin-top: var(--s-8);
+}
+
+.pdp-list {
+  display: grid;
+  gap: 4px;
+  margin-top: var(--s-3);
+  padding-left: var(--s-4);
+  list-style: disc;
+}
+
+.sizetable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-nav);
+}
+
+.sizetable th,
+.sizetable td {
+  padding: 10px 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--c-hairline);
+}
+
+.sizetable th {
+  text-transform: uppercase;
+  letter-spacing: var(--ls-caps);
+  font-size: var(--fs-label);
+}
+
+.reviews__summary {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  margin-bottom: var(--s-3);
+}
+
+@media (max-width: 1099px) {
+  .pdp {
+    grid-template-columns: 1fr;
+  }
+  .pdp-info {
+    position: static;
+    padding-top: var(--s-6);
+  }
+}
+
+@media (max-width: 699px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .gallery__img--wide {
+    grid-column: span 1;
+  }
+  .colourbox {
+    width: 92px;
+  }
+  .sizegrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
