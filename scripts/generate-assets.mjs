@@ -14,14 +14,14 @@
 
 import { mkdirSync, writeFileSync, rmSync } from 'node:fs'
 import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { fileURLToPath, pathToFileURL } from 'node:url'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const IMG = join(ROOT, 'public', 'images')
 
 /* ------------------------------------------------------------------ palette */
 
-const C = {
+export const C = {
   black: '#1a1a1a',
   white: '#f2f2f2',
   navy: '#232f47',
@@ -35,7 +35,7 @@ const C = {
   sage: '#9aab96',
   brown: '#4a3a30',
 }
-const NAMES = {
+export const NAMES = {
   black: 'Black', white: 'White', navy: 'Navy', grey: 'Grey melange', teal: 'Teal',
   burgundy: 'Burgundy', beige: 'Beige', olive: 'Olive', sky: 'Light blue',
   blush: 'Blush', sage: 'Sage', brown: 'Dark brown',
@@ -278,7 +278,7 @@ const K = ['2-4Y', '4-6Y', '6-8Y', '8-10Y', '10-12Y'] // kids
 const S = ['35-38', '39-42', '43-46']                 // socks
 
 // slug, name, garment, category, sub, price, pack, sizes, colours, extras
-const CATALOG = [
+export const CATALOG = [
   // ---- men
   ['10-pack-short-cotton-trunks', '10-PACK SHORT COTTON TRUNKS', 'trunks', 'men', 'Trunks', 2999, 10, A, ['black'], { rating: [4.7, 39] }],
   ['5-pack-cotton-short-trunks', '5-PACK COTTON SHORT TRUNKS', 'trunks', 'men', 'Trunks', 1499, 5, A, ['black', 'navy', 'burgundy', 'grey'], { rating: [4.6, 214] }],
@@ -380,46 +380,81 @@ const DETAILS = {
 
 /* ------------------------------------------------------------------- writing */
 
-const GALLERY = [
-  ['01-model', 2],
-  ['02-model-crop', 1],
-  ['03-pack', 1],
-  ['04-flat', 2],
-  ['05-detail', 2],
-]
+/**
+ * Image economy. A full catalogue shoot is 7 images per colourway — 800+ for this range, which is
+ * far more than a demo can review, let alone shoot. Three rules cut it to ~146 with no visible loss:
+ *
+ *   1. The packshot doubles as the swatch thumbnail and as the PDP's flat shot.
+ *   2. Model shots exist only for the HERO_COUNT products a client will actually open, and only in
+ *      the primary colour — so a wrong-coloured model shot is never displayed.
+ *   3. The fabric macro is shared per colour, not per product. It is abstract texture; nobody can
+ *      tell which garment it was cropped from.
+ */
+export const HERO_COUNT = 12
+
+/** `--real` emits .jpg paths and skips placeholder drawing, for when real photography lands. */
+const REAL = process.argv.includes('--real')
+export const EXT = REAL ? 'jpg' : 'svg'
+
+/** Every colourway shows model?/packshot/detail — 2 or 3 images, so the mosaic never looks bare. */
+export function galleryFor({ slug, colourKey, hasModel }) {
+  const base = `/images/products/${slug}/${colourKey}`
+  const model = hasModel ? { src: `${base}/01-model.${EXT}`, span: 2 } : null
+  return [
+    model,
+    { src: `${base}/packshot.${EXT}`, span: model ? 1 : 2 },
+    { src: `/images/shared/detail-${colourKey}.${EXT}`, span: model ? 1 : 2 },
+  ].filter(Boolean)
+}
 
 function build() {
   rmSync(join(IMG, 'products'), { recursive: true, force: true })
+  rmSync(join(IMG, 'shared'), { recursive: true, force: true })
   mkdirSync(join(IMG, 'home'), { recursive: true })
-  writeHomeImages()
+  mkdirSync(join(IMG, 'shared'), { recursive: true })
+  if (!REAL) writeHomeImages()
 
   const products = []
-  let imageCount = 0
+  let imageCount = REAL ? 0 : 7
+  const sharedColours = new Set()
 
   CATALOG.forEach((row, index) => {
     const [slug, name, type, category, subCategory, price, packSize, sizes, colourKeys, extra] = row
-    const colors = colourKeys.map((key) => {
-      const main = C[key]
-      const dir = join(IMG, 'products', slug, key)
-      mkdirSync(dir, { recursive: true })
+    const isHero = index < HERO_COUNT
 
-      writeFileSync(join(dir, 'packshot.svg'), packshot(type, main))
-      writeFileSync(join(dir, 'swatch.svg'), swatch(type, main))
-      writeFileSync(join(dir, '01-model.svg'), modelShot(type, main, { w: 1600, h: 2100 }))
-      writeFileSync(join(dir, '02-model-crop.svg'), modelShot(type, main, { w: 1000, h: 1300, crop: true }))
-      writeFileSync(join(dir, '03-pack.svg'), packStack(type, main, packSize, { w: 1000, h: 1300 }))
-      writeFileSync(join(dir, '04-flat.svg'), flatShot(type, main, { w: 1600, h: 2100 }))
-      writeFileSync(join(dir, '05-detail.svg'), detailShot(main, { w: 1600, h: 2100 }))
-      imageCount += 7
+    const colors = colourKeys.map((key, colourIndex) => {
+      const main = C[key]
+      const hasModel = isHero && colourIndex === 0
+      const dir = join(IMG, 'products', slug, key)
+
+      if (!REAL) {
+        mkdirSync(dir, { recursive: true })
+        writeFileSync(join(dir, 'packshot.svg'), packshot(type, main))
+        imageCount += 1
+        if (hasModel) {
+          writeFileSync(join(dir, '01-model.svg'), modelShot(type, main, { w: 1600, h: 2100 }))
+          imageCount += 1
+        }
+        if (!sharedColours.has(key)) {
+          writeFileSync(
+            join(IMG, 'shared', `detail-${key}.svg`),
+            detailShot(main, { w: 1600, h: 2100 }),
+          )
+          imageCount += 1
+        }
+      }
+      sharedColours.add(key)
 
       const base = `/images/products/${slug}/${key}`
       return {
         key,
         name: NAMES[key],
         hex: main,
-        packshot: `${base}/packshot.svg`,
-        swatchImage: `${base}/swatch.svg`,
-        gallery: GALLERY.map(([file, span]) => ({ src: `${base}/${file}.svg`, span })),
+        packshot: `${base}/packshot.${EXT}`,
+        // The packshot is already a clean flat-lay on the band colour — a separate swatch
+        // crop would be the same photograph at a smaller size.
+        swatchImage: `${base}/packshot.${EXT}`,
+        gallery: galleryFor({ slug, colourKey: key, hasModel }),
       }
     })
 
@@ -503,8 +538,13 @@ export const byIds = (ids: string[]) =>
   writeFileSync(join(ROOT, 'src', 'data', 'products.ts'), ts)
 
   console.log(`✓ ${withRelations.length} products`)
-  console.log(`✓ ${imageCount + 7} placeholder images`)
+  console.log(
+    REAL
+      ? '✓ paths switched to .jpg — placeholders left untouched'
+      : `✓ ${imageCount} placeholder images`,
+  )
   console.log('✓ src/data/products.ts')
 }
 
-build()
+// Only build when run directly, so image-manifest.mjs can import CATALOG without side effects.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) build()

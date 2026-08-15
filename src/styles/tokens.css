@@ -41,6 +41,8 @@
   --header-h-stuck: 58px;
   --promobar-h: 48px;
   --inset-w: 60vw;
+  --pdp-gallery-w: 49%; /* PDP left column; the info panel takes the rest */
+  --pdp-info-w: 573px; /* info content width, centred inside that panel */
   --radius: 0;
 
   /* motion */

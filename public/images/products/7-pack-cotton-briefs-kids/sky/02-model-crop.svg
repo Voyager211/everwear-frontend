@@ -1,4 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1300" width="1000" height="1300"><defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1">
-       <stop offset="0" stop-color="#efecea"/><stop offset="1" stop-color="#e2dedb"/></linearGradient></defs>
-     <rect width="1000" height="1300" fill="url(#b)"/><ellipse cx="500" cy="208" rx="300" ry="312" fill="#d3cbc3"/>
-       <rect x="240" y="442.00000000000006" width="520" height="909.9999999999999" rx="160" fill="#dad3cb"/><g transform="translate(137.8 273.0) scale(0.7243)"><path d="M262 492 L738 492 L732 640 C732 700 688 730 628 736 L612 736 C594 690 552 668 500 668 C448 668 406 690 388 736 L372 736 C312 730 268 700 268 640 Z" fill="#a8c4dd"/><path d="M258 428 L742 428 L742 498 L258 498 Z" fill="#92aec7"/></g></svg>

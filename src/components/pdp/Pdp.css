@@ -81,12 +81,13 @@
   margin-top: var(--s-4);
 }
 
-/* An image thumbnail in a bordered box — not a colour dot. */
+/* An image thumbnail in a bordered box — not a colour dot. The box matches the band because
+   the thumbnail is the packshot, which is shot on the band colour. */
 .colourbox {
   width: 116px;
   padding: 4px;
   border: 1px solid transparent;
-  background: var(--c-bg);
+  background: var(--c-band);
 }
 
 .colourbox img {

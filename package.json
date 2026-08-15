@@ -8,7 +8,9 @@
     "assets": "node scripts/generate-assets.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "manifest": "node scripts/image-manifest.mjs",
+    "images": "node scripts/generate-images.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",
