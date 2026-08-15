@@ -74,75 +74,80 @@
   gap: 2px;
 }
 
-/* The whole column is the link — image, title and hover overlay all sit inside it. */
+/* The whole column is the link — image, title and hover overlay all sit inside it.
+   Deliberately no `overflow: hidden`: it would turn this into a scroll container and kill the
+   `position: sticky` the title and button depend on. */
 .campaign__col {
   position: relative;
   display: block;
-  overflow: hidden;
 }
 
-/* A viewport-height tile rather than the viewport-taller scroll panel this used to be: a hover
-   overlay with a centred button only works when the whole tile is on screen at once. */
+/* The photograph at its own aspect ratio, never cropped, so the model is whole. The files are
+   1:1.5, which makes each tile roughly one and a half viewports tall. */
 .campaign__img {
+  display: block;
   width: 100%;
-  height: clamp(460px, 80vh, 880px);
-  object-fit: cover;
-  transition: scale 0.6s var(--ease);
+  height: auto;
 }
 
-.campaign__col:hover .campaign__img {
-  scale: 1.04;
+/* Covers the full height of the tile and carries the hover wash. */
+.campaign__layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.35s var(--ease);
+}
+
+.campaign__col:hover .campaign__layer,
+.campaign__col:focus-visible .campaign__layer {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Title and button ride the viewport, so both stay in view for the whole tall scroll. */
+.campaign__sticky {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  height: 100vh;
+  padding-top: calc(var(--header-h-stuck) + var(--s-5));
 }
 
 /* Scrim so the title holds up over both a pale and a dark photograph. */
-.campaign__col::before {
+.campaign__sticky::before {
   content: '';
   position: absolute;
   inset: 0 0 auto 0;
-  z-index: 1;
-  height: 180px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), transparent);
+  height: 190px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), transparent);
   pointer-events: none;
 }
 
 .campaign__title {
-  position: absolute;
-  top: var(--s-6);
-  left: 50%;
-  translate: -50% 0;
-  z-index: 2;
+  position: relative;
   color: #ffffff;
   font-size: var(--fs-lead);
   white-space: nowrap;
 }
 
-.campaign__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  display: grid;
-  place-items: center;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transition: opacity 0.35s var(--ease);
-}
-
-.campaign__col:hover .campaign__overlay,
-.campaign__col:focus-visible .campaign__overlay {
-  opacity: 1;
-}
-
 .campaign__cta {
+  align-self: center;
   padding: 15px 38px;
   background: var(--c-bg);
   color: var(--c-fg);
   font-size: var(--fs-nav);
+  opacity: 0;
   translate: 0 10px;
-  transition: translate 0.35s var(--ease);
+  transition:
+    opacity 0.35s var(--ease),
+    translate 0.35s var(--ease);
 }
 
 .campaign__col:hover .campaign__cta,
 .campaign__col:focus-visible .campaign__cta {
+  opacity: 1;
   translate: 0 0;
 }
 

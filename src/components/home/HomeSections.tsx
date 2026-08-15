@@ -63,9 +63,13 @@ function CampaignColumn({ tile }: { tile: CampaignTile }) {
   return (
     <Link to={tile.href} className="campaign__col" aria-label={`${tile.caption} — explore`}>
       <img src={tile.image} alt="" className="campaign__img" />
-      <span className="campaign__title caps">{tile.caption}</span>
-      <span className="campaign__overlay" aria-hidden>
-        <span className="campaign__cta caps">Explore</span>
+      {/* The tile is taller than the viewport, so the title and button ride inside a sticky
+          viewport-height box — otherwise a centred button sits off screen for most of the scroll. */}
+      <span className="campaign__layer" aria-hidden>
+        <span className="campaign__sticky">
+          <span className="campaign__title caps">{tile.caption}</span>
+          <span className="campaign__cta caps">Explore</span>
+        </span>
       </span>
     </Link>
   )

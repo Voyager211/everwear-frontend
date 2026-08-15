@@ -79,7 +79,8 @@ const SLOTS = [
     orientation: 'portrait',
     w: 1152,
     h: 2048,
-    note: 'Very tall crop; keep the subject centred.',
+    // Downloaded uncropped so the model is whole; the tile shows the file at its own ratio.
+    noCrop: true,
   },
   {
     id: 'campaign-2',
@@ -89,7 +90,8 @@ const SLOTS = [
     orientation: 'portrait',
     w: 1152,
     h: 2048,
-    note: 'Very tall crop; keep the subject centred.',
+    // Downloaded uncropped so the model is whole; the tile shows the file at its own ratio.
+    noCrop: true,
   },
   {
     id: 'category-briefs',
@@ -204,8 +206,11 @@ for (const slot of slots) {
       continue
     }
     const chosen = results[Math.min(PICK, results.length) - 1]
-    // Pexels serves resized, cropped derivatives straight from the CDN.
-    const url = `${chosen.src}?auto=compress&cs=tinysrgb&fit=crop&w=${slot.w}&h=${slot.h}`
+    // Pexels serves resized, cropped derivatives straight from the CDN. `noCrop` asks for a width
+    // only, keeping the photograph's own aspect ratio so nothing is cut off the subject.
+    const url = slot.noCrop
+      ? `${chosen.src}?auto=compress&cs=tinysrgb&w=${slot.w}`
+      : `${chosen.src}?auto=compress&cs=tinysrgb&fit=crop&w=${slot.w}&h=${slot.h}`
 
     if (DRY) {
       console.log(`  · ${slot.id} (${results.length} found) → ${chosen.page}`)
