@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom'
 import { hero, type CampaignTile, type HomeModule } from '../../data/home'
 import { offer } from '../../data/site'
-import { byIds, bySlug } from '../../data/products'
-import { formatPrice } from '../../lib/format'
+import { byIds } from '../../data/products'
 import { useCountdown } from '../../lib/hooks'
 import { SectionHeaderRow } from '../ui'
-import { LongArrow } from '../ui/icons'
 import './Home.css'
 
 /**
@@ -57,41 +55,19 @@ export function OfferStrip() {
   )
 }
 
-/** Price chip pinned over campaign photography — click through to the product. */
-function HotspotTag({ x, y, slug }: { x: string; y: string; slug: string }) {
-  const product = bySlug(slug)
-  if (!product) return null
-  return (
-    <Link
-      to={`/product/${product.slug}`}
-      className="hotspot"
-      style={{ left: x, top: y }}
-      onClick={(e) => e.stopPropagation()}
-    >
-      <span className="hotspot__mark" />
-      <span className="hotspot__price">{formatPrice(product.price)}</span>
-    </Link>
-  )
-}
-
 /**
- * Two viewport-taller images side by side. The caption row is `sticky bottom: 0`, so it stays
- * pinned to the bottom of the screen while the image scrolls behind it — the module's whole trick.
+ * A category tile: the whole column is one link, with a centred title over the top of the image
+ * and an overlay that fades in on hover or keyboard focus carrying the EXPLORE call to action.
  */
 function CampaignColumn({ tile }: { tile: CampaignTile }) {
   return (
-    <div className="campaign__col">
-      <Link to={tile.href} className="campaign__imgwrap">
-        <img src={tile.image} alt="" className="campaign__img" />
-      </Link>
-      {tile.hotspots.map((spot) => (
-        <HotspotTag key={spot.slug} {...spot} />
-      ))}
-      <Link to={tile.href} className="campaign__caption">
-        <span className="caps">{tile.caption}</span>
-        <LongArrow className="arrow" />
-      </Link>
-    </div>
+    <Link to={tile.href} className="campaign__col" aria-label={`${tile.caption} — explore`}>
+      <img src={tile.image} alt="" className="campaign__img" />
+      <span className="campaign__title caps">{tile.caption}</span>
+      <span className="campaign__overlay" aria-hidden>
+        <span className="campaign__cta caps">Explore</span>
+      </span>
+    </Link>
   )
 }
 

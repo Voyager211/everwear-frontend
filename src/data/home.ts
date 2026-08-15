@@ -13,13 +13,11 @@ export const hero = {
   href: '/shop?scope=men',
 }
 
-export type HotspotSpec = { x: string; y: string; slug: string }
-
 export type CampaignTile = {
   image: string
+  /** Rendered as a centred title over the top of the image. */
   caption: string
   href: string
-  hotspots: HotspotSpec[]
 }
 
 export type HomeModule =
@@ -49,23 +47,16 @@ export const homeModules: HomeModule[] = [
     label: 'EVERYDAY COMFORT',
     href: '/shop',
     tiles: [
+      // Order follows the artwork: campaign-1 is the women's shot, campaign-2 the men's.
       {
         image: '/images/home/campaign-1.jpg',
-        caption: 'SOFT COTTON ESSENTIALS',
-        href: '/shop?scope=men',
-        hotspots: [
-          { x: '58%', y: '34%', slug: '3-pack-ribbed-cotton-vests' },
-          { x: '40%', y: '68%', slug: '5-pack-cotton-briefs' },
-        ],
+        caption: "WOMEN'S COLLECTION",
+        href: '/shop?scope=women',
       },
       {
         image: '/images/home/campaign-2.jpg',
-        caption: 'PERFORMANCE LAYERS',
-        href: '/shop?q=performance',
-        hotspots: [
-          { x: '62%', y: '41%', slug: '3-pack-coolmax-mid-trunks' },
-          { x: '46%', y: '72%', slug: 'seamless-performance-trunks' },
-        ],
+        caption: "MEN'S COLLECTION",
+        href: '/shop?scope=men',
       },
     ],
   },
