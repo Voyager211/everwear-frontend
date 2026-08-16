@@ -131,7 +131,9 @@
    that spot on the image and scrolls out of view instead of tracking down the page. */
 .campaign__cta {
   position: absolute;
-  top: 50vh;
+  /* Half a screen down, but never past the middle of the tile — on a phone the tile is shorter
+     than the viewport, and a bare 50vh would drop the button off the bottom of the image. */
+  top: min(50vh, 50%);
   left: 50%;
   padding: 15px 38px;
   background: var(--c-bg);
@@ -213,9 +215,9 @@
   .tilepair {
     grid-template-columns: 1fr;
   }
-  .campaign__img {
-    height: 120vh;
-  }
+  /* No height override here on purpose. Forcing a viewport-relative height while the width is
+     100% distorts the photograph, because there is no object-fit to letterbox it. The image keeps
+     its own aspect ratio at every width. */
   .packshots {
     grid-template-columns: repeat(3, 1fr);
   }
